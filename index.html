@@ -195,9 +195,14 @@
 
     <!-- BARRA AMARILLA CON FRASE CENTRADA ABAJO -->
     <div class="frase-container">
-        <p>¡Toma tus flores amarillas, Cielo y BAÑATE!</p>
+        <p>¡Para ti con mucho cariño!</p>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Script integrado directamente para evitar errores de carga de archivos externos -->
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.remove("container");
+        });
+    </script>
 </body>
 </html>
