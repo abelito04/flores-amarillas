@@ -314,8 +314,107 @@ body {
 }
 
 /* ========================================================= */
-/* MAGIA DEL EFECTO DE CRECIMIENTO INICIAL (CLASE CONTAINER)  */
+/* ANIMACIONES DE CRECIMIENTO Y MOVIMIENTO (KEYFRAMES)       */
 /* ========================================================= */
+@keyframes grow-flower-tree {
+  0% {
+    height: 0;
+    border-radius: 1vmin;
+  }
+}
+
+@keyframes blooming-flower {
+  0% {
+    transform: scale(0);
+  }
+}
+
+@keyframes blooming-leaf-right {
+  0% {
+    transform-origin: left;
+    transform: rotate(70deg) rotateY(30deg) scale(0);
+  }
+}
+
+@keyframes blooming-leaf-left {
+  0% {
+    transform-origin: right;
+    transform: rotate(-70deg) rotateY(30deg) scale(0);
+  }
+}
+
+@keyframes moving-flower-1 {
+  0%, 100% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes moving-flower-2 {
+  0%, 100% {
+    transform: rotate(18deg);
+  }
+  50% {
+    transform: rotate(22deg);
+  }
+}
+
+@keyframes moving-flower-3 {
+  0%, 100% {
+    transform: rotate(-17deg);
+  }
+  50% {
+    transform: rotate(-13deg);
+  }
+}
+
+@keyframes light-ans {
+  0% {
+    opacity: 0;
+    transform: translateY(0vmin);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(-5vmin) translateX(-2vmin);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-15vmin) translateX(2vmin);
+    filter: blur(0.2vmin);
+  }
+  75% {
+    opacity: 0.5;
+    transform: translateY(-25vmin) translateX(-1vmin);
+    filter: blur(0.4vmin);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-35vmin) translateX(1vmin);
+    filter: blur(0.5vmin);
+  }
+}
+
+@keyframes moving-grass {
+  0%, 100% {
+    transform: rotate(-48deg) rotateY(40deg);
+  }
+  50% {
+    transform: rotate(-50deg) rotateY(40deg);
+  }
+}
+
+@keyframes moving-grass--2 {
+  0%, 100% {
+    transform: scale(0.5) rotate(75deg) rotateX(10deg) rotateY(-200deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(73deg) rotateX(10deg) rotateY(-200deg);
+  }
+}
+
+/* PAUSA INICIAL CUANDO LA CLASE CONTAINER ESTÁ ACTIVA */
 body.container * {
   animation-play-state: paused !important;
 }
