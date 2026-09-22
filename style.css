@@ -20,27 +20,33 @@ body {
   perspective: 1000px;
 }
 
-/* ESTILOS PARA LA BARRA AMARILLA INFERIOR CENTRADA */
+/* ESTILOS OPTIMIZADOS PARA LA BARRA AMARILLA (MÓVIL Y PC) */
 .frase-container {
   position: absolute;
-  bottom: 25px;
+  bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #fce700;
-  padding: 12px 24px;
+  padding: 10px 20px;
   border-radius: 30px;
-  box-shadow: 0 4px 15px rgba(252, 231, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(252, 231, 0, 0.4);
   z-index: 1000;
+  width: 90%;
+  max-width: 350px;
+  box-sizing: border-box;
 }
 
 .frase-container p {
   color: #111111;
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   text-align: center;
   margin: 0;
   letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .night {
